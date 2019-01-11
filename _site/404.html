@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- HTML Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I’m Tom Meagher (MAH-hur): a programmer, blogger, and walk enthusiast living in NYC.">
+  <meta name="author" content="Tom Meagher">
+  <meta name="keywords" content="tom, tomfme, meagher, code, design, startups, technology, tech, design">
+
+  <title>Something went wrong—Tom Meagher</title>
+
+  <link rel="canonical" href="http://localhost:4000/404.html">
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+  <!-- /HTML Meta Tags -->
+
+  <!-- Favicons -->
+  <link href="/assets/favicons/night/favicon.ico" rel="icon">
+  <link href="/assets/favicons/night/icon-512.png" rel="icon" sizes="512x512">
+  <link href="/assets/favicons/night/icon-192.png" rel="icon" sizes="192x192">
+  <link href="/assets/favicons/night/icon-144.png" rel="icon" sizes="144x144">
+  <link href="/assets/favicons/night/icon-96.png" rel="icon" sizes="96x96">
+  <link href="/assets/favicons/night/icon-72.png" rel="icon" sizes="72x72">
+  <link href="/assets/favicons/night/icon-512.png" rel="apple-touch-icon" sizes="512x512">
+  <link href="/assets/favicons/night/icon-192.png" rel="apple-touch-icon" sizes="192x192">
+  <link href="/assets/favicons/night/icon-144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="/assets/favicons/night/icon-96.png" rel="apple-touch-icon" sizes="96x96">
+  <link href="/assets/favicons/night/icon-72.png" rel="apple-touch-icon" sizes="72x72">
+  <!-- /Favicons -->  
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Something went wrong ~ Tom Meagher">
+  <meta name="twitter:description" content="I’m Tom Meagher (MAH-hur): a programmer, blogger, and walk enthusiast living in NYC.">
+  <meta name="twitter:image" content="">
+  <!-- /Twitter Meta Tags -->
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Something went wrong ~ Tom Meagher">
+  <meta property="og:description" content="I’m Tom Meagher (MAH-hur): a programmer, blogger, and walk enthusiast living in NYC.">
+  <meta property="og:image" content="">
+  <!-- /Facebook Meta Tags -->
+
+  <!-- Search Engine Tags -->
+  <meta itemprop="name" content="Something went wrong ~ Tom Meagher">
+  <meta itemprop="description" content="I’m Tom Meagher (MAH-hur): a programmer, blogger, and walk enthusiast living in NYC.">
+  <meta itemprop="image" content="">
+  <!-- /Search Engine Tags -->
+</head>
+
+  <body class="night">
+    <img src="assets/icons/night.svg" id="night">
+    <img src="assets/icons/day.svg" id="day">
+    <img src="assets/icons/sepia.svg" id="sepia">
+    <img src="assets/icons/dusk.svg" id="dusk">
+    <h1>Something went wrong</h1>
+
+<p>Well, that's awkward. Sorry about that.</p>
+
+<p>You might be looking for my old blog, which has moved to <a href="https://websgrain.com">The Web's Grain</a>.</p>
+
+<p>Or perhaps you would like to check out my <a href="/">homepage</a> instead.</p>
+
+  </body>
+  
+
+  <script>
+    const setTheme = (t1, t2) => {
+      document.body.classList.replace(t1, t2)
+    }
+
+    const setFavicons = (t1, t2) => {
+      const links = document.querySelectorAll("link[rel*='icon']")
+      links.forEach(link => { link.href = link.href.replace(t1, t2) })
+    }
+
+    const initTheme = (t1, t2) => {
+      document
+        .getElementById(t1)
+        .addEventListener(
+          'click',
+          () => {
+            setTheme(t1, t2)
+            setFavicons(t1, t2)
+            localStorage.setItem('theme', t2)
+          }
+        )
+    }
+
+    const theme = localStorage.getItem('theme') || 'night'
+    setTheme('night', theme)
+    setFavicons('night', theme)
+
+    initTheme('night', 'day')
+    initTheme('day', 'sepia')
+    initTheme('sepia', 'dusk')
+    initTheme('dusk', 'night')
+  </script>
+</html>
