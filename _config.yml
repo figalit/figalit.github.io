@@ -1,4 +1,4 @@
-author: 'Tom Meagher'
+author: 'Figali Taho'
 defaults:
   -
     scope:
@@ -6,14 +6,14 @@ defaults:
       type: 'pages'
     values:
       layout: 'base'
-description: "I’m Tom Meagher (MAH-hur): a programmer, blogger, and walk enthusiast living in NYC."
+description: "I’m Figali Taho."
 exclude:
   - '.gitignore'
   - 'CNAME'
   - 'LICENSE'
   - 'README.md'
   - 'sketch'
-keywords: 'tom, tomfme, meagher, code, design, startups, technology, tech, design'
+keywords: 'code, design, startups, technology, tech, design'
 permalink: pretty
 sass:
   style: compressed
